@@ -23,7 +23,7 @@ import time
 import asyncio
 import threading
 import zipfile
-
+import socks
 import logging
 import configparser
 
