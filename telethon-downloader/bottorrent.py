@@ -40,7 +40,7 @@ from youtube import youtube_download
 
 
 session = SESSION
-proxy = (socks.SOCKS5, http://192.168.1.120, 7891)
+proxy = (socks.SOCKS5, 192.168.1.120, 7891)
 
 download_path = TG_DOWNLOAD_PATH
 download_path_torrent = TG_DOWNLOAD_PATH_TORRENTS # Directorio bajo vigilancia de DSDownload u otro.
