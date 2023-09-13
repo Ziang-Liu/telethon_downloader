@@ -40,7 +40,7 @@ from youtube import youtube_download
 
 
 session = SESSION
-proxy = (socks.SOCKS5, 192.168.1.120, 7891)
+proxy = (socks.SOCKS5, '192.168.1.120', 7891)
 
 download_path = TG_DOWNLOAD_PATH
 download_path_torrent = TG_DOWNLOAD_PATH_TORRENTS # Directorio bajo vigilancia de DSDownload u otro.
@@ -197,7 +197,7 @@ async def worker(name):
         # Unidad de trabajo terminada.
         queue.task_done()
 
-client = TelegramClient(session, api_id, api_hash, proxy, request_retries = 10, flood_sleep_threshold = 120)
+client = TelegramClient(session, api_id, api_hash, proxy=proxy, request_retries = 10, flood_sleep_threshold = 120)
 
 @events.register(events.NewMessage)
 async def handler(update):
